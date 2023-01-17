@@ -24,7 +24,7 @@ int IndexOf(int[] collection, int find)
 {
 	int count = collection.Length;
 	int ind = 0;
-	int position = 0;
+	int position = -1;
 
 	while(ind < count)
 	{
