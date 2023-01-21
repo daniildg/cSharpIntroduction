@@ -3,12 +3,11 @@
 
 Console.Write("Enter Number ");
 int weekDay = Convert.ToInt32(Console.ReadLine());
-switch(weekDay)
+if(weekDay == 6 || weekDay == 7) // связка двух условий (выполняется если одно из условий верно)
 {
-  case 6 or 7:
   Console.WriteLine($"{weekDay} -> Yes");
-  break;
-  default:
+}
+else
+{
   Console.WriteLine($"{weekDay} -> No");
-  break;
 }
