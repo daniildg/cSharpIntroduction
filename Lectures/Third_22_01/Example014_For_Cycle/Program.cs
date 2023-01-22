@@ -13,4 +13,4 @@ string Method4(int count, string text)
 }
 //string result = Method4(10, "asdf ");
 string result = Method4(text: "asdf ", count: 10);
-//System.Console.WriteLine(result);
+System.Console.WriteLine(result);
