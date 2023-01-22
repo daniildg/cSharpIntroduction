@@ -1,7 +1,7 @@
 ﻿//Распределить числа в массиве от большего к меньшему
 // по приниципу сортировки методом выбора
 
-int[] arr = {1,5,4,3,2,6,7,1,1};
+int[] arr = {1,5,4,3,2,6,7,1,9};
 
 void printArray(int[]array)
 {
@@ -20,7 +20,7 @@ void selectionSort(int[] array)
   {
     int maxPosition = i;
     
-    for(int j = i + 1; j < array.Length - 2; j++)           
+    for(int j = i + 1; j < array.Length; j++)           
     {                                                   
       if(array[j] > array[maxPosition]) maxPosition =j; 
     }                                                   
