@@ -1,5 +1,6 @@
 ﻿// Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// PrintArray(GetRandomArray(8));
 Console.Write("[ ");
 PrintArray(GetRandomArray(8));
 Console.Write("]");
@@ -16,9 +17,18 @@ int[] GetRandomArray(int length)
 
 void PrintArray(int[] arr)
 {
-  
   foreach(int item in arr)
   {
     Console.Write(item + " ");
   }
 }
+
+// void PrintArray(int[] arr)
+// {
+//   int count = arr.Length;
+
+//   for(int position = 0; position < count; position++)
+//   {
+//     Console.Write($"{arr[position]}, ");
+//   }
+// }
