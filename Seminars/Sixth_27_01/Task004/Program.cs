@@ -3,7 +3,6 @@
 
 int[] array = GetRandomArray(123);
 PrintArray(array);
-Console.WriteLine();
 Console.WriteLine($"count -> {FindNumInInterval(array)}");
 
 int FindNumInInterval(int[] array)
@@ -36,4 +35,5 @@ void PrintArray(int[] arr)
     {
         Console.Write(item + " ");
     }
+    Console.WriteLine();
 }
