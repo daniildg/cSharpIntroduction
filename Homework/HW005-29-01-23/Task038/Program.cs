@@ -3,13 +3,13 @@
 //[3 7 22 2 78] -> 76
 
 int[] array = GetRandomArray(10);
-Array.Sort(array);
-foreach (int item in array)
+foreach (int num in array)
 {
-  Console.Write(item + " ");
+  Console.Write(num + " ");
 }
 Console.WriteLine();
-System.Console.WriteLine($"{array[9]} - {array[0]} = {array[9] - array[0]}");
+Array.Sort(array);
+Console.WriteLine($"{array[9]} - {array[0]} = {array[9] - array[0]}");
 
 int[] GetRandomArray(int length)
 {
