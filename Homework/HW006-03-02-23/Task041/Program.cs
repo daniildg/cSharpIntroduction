@@ -6,7 +6,7 @@ string[] sep = line.Split(' ');
 int[] convert = Array.ConvertAll<string, int>(sep, int.Parse);
 Console.WriteLine($"Чисел больше нуля -> {MoreThanZero(convert)}");
 
-int MoreThanZero(int[] array)
+static int MoreThanZero(int[] array)
 {
   int res = 0;
   for (int i = 0; i < array.Length; i++)
