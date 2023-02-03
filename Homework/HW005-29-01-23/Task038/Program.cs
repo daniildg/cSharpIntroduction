@@ -2,14 +2,15 @@
 //Найдите разницу между максимальным и минимальным элементов массива.
 //[3 7 22 2 78] -> 76
 
-int[] array = GetRandomArray(10);
+int[] array = GetRandomArray(new Random().Next(1,15));
 foreach (int num in array)
 {
   Console.Write(num + " ");
 }
 Console.WriteLine();
 Array.Sort(array);
-Console.WriteLine($"{array[9]} - {array[0]} = {array[9] - array[0]}");
+int diff = array[array.Length -1] - array[0];
+Console.WriteLine($"{array[array.Length -1]} - {array[0]} = {diff}");
 
 int[] GetRandomArray(int length)
 {
