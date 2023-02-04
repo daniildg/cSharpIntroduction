@@ -2,8 +2,8 @@
 
 Console.Write("Введите ваши числа через пробел -> ");
 string line = Console.ReadLine();
-string[] sep = line.Split(' ');
-int[] convert = Array.ConvertAll<string, int>(sep, int.Parse);
+string[] separate = line.Split(' ');
+int[] convert = Array.ConvertAll<string, int>(separate, int.Parse);
 Console.WriteLine($"Чисел больше нуля -> {MoreThanZero(convert)}");
 
 static int MoreThanZero(int[] array)
