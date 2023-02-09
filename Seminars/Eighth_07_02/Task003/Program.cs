@@ -25,14 +25,6 @@ void WriteVocabulary(int[] arr)
   Console.WriteLine($"{element} -> {count} раз(а)");
 }
 
-void PrintArray(int[] arr)
-{
-  for(int i = 0; i < arr.Length; i++)
-  {
-    Console.Write($"{arr[i]} ");
-  }
-}
-
 int[] GetArray(int [,] matr)
 {
   int[] result = new int[matr.GetLength(0) * matr.GetLength(1)];
