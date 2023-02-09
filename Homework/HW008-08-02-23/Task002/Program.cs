@@ -4,12 +4,12 @@
 int[,] matrix = CreateRectangularMatrix(5);
 PrintMatrix(matrix);
 Console.WriteLine();
-int[] sumsArray = GetSumsArray(matrix);
-int position = IndexOfSmallestSum(sumsArray);
+int position = IndexOfSmallestSum(matrix);
 Console.WriteLine($"строка с наименьшей суммой элементов -> {position}");
 
-int IndexOfSmallestSum(int[] sums)
+int IndexOfSmallestSum(int[,] matr)
 {
+  int[] sums = GetSumsArray(matr);
   int pos = 0;
   for(int i = 0; i < sums.Length; i++)
   {
