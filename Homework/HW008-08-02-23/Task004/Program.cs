@@ -23,18 +23,33 @@ void Write3DArray(int[,,] cube)
 
 int[,,] Create3DArray(int a, int b, int c)
 {
-  int[,,] cubeArray = new int[a, b, c];
-  int num = 10;
-  for (int i = 0; i < cubeArray.GetLength(0); i++)
-  {
-    for (int j = 0; j < cubeArray.GetLength(1); j++)
+    int[,,] cubeArray = new int[a, b, c];
+    cubeArray[0, 0, 0] = new Random().Next(10, 100);
+    for (int i = 0; i < cubeArray.GetLength(0); i++)
     {
-      for (int k = 0; k < cubeArray.GetLength(2); k++)
-      {
-        cubeArray[i, j, k] = num;
-        num++;
-      }
+        for (int j = 0; j < cubeArray.GetLength(1); j++)
+        {
+            for (int k = 0; k < cubeArray.GetLength(2); k++)
+            {
+                cubeArray[i, j, k] = IsContained(cubeArray);
+            }
+        }
     }
-  }
-  return cubeArray;
+    return cubeArray;
+}
+
+int IsContained(int[,,] cube)
+{
+    int i = 0;
+    int length = cube.GetLength(0)
+        * cube.GetLength(1) * cube.GetLength(2);
+    int el = cube[0, 0, 0];
+    while (i < length)
+    {
+        int newEl = new Random().Next(10, 100);
+        if (newEl != el) return newEl;
+        el = newEl;
+        i++;
+    }
+    return el;
 }
