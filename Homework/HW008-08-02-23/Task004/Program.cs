@@ -2,9 +2,6 @@
 Напишите программу, которая будет построчно выводить массив,
 добавляя индексы каждого элемента. */
 
-int[,,] array = Create3DArray(5, 3, 5);
-Write3DArray(array);
-
 void Write3DArray(int[,,] cube)
 {
   for (int i = 0; i < cube.GetLength(0); i++)
@@ -59,3 +56,5 @@ bool IsNotContained(int[,,] cube, int el)
   }
   return true;
 }
+int[,,] array = Create3DArray(5, 3, 5);
+Write3DArray(array);
