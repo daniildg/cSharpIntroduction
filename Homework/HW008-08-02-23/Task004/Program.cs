@@ -10,7 +10,7 @@ void Write3DArray(int[,,] cube)
     {
       for (int k = 0; k < cube.GetLength(2); k++)
       {
-        Console.Write($"{cube[i, j, k]} "); //-> ({i}, {j}, {k}) ");
+        Console.Write($"{cube[i, j, k]} -> ({i}, {j}, {k}) ");
       }
       Console.WriteLine();
     }
@@ -28,21 +28,18 @@ int[,,] Create3DArray(int a, int b, int c)
       for (int k = 0; k < cubeArray.GetLength(2); k++)
       {
         int num = 0;
-        int cubeLength = cubeArray.GetLength(0)
-                      * cubeArray.GetLength(1) * cubeArray.GetLength(2);
-        for(int ind = 0; ind < cubeLength; ind++)
+        while(IsContained(cubeArray, num))
         {
-          num = new Random().Next(10, 100);
-          if (IsNotContained(cubeArray, num) == true) break;
+          num = new Random().Next(10,100);
         }
-        cubeArray[i, j, k] = num;
-      }
+        cubeArray[i, j, k] = num;    
+      }        
     }
   }
   return cubeArray;
 }
 
-bool IsNotContained(int[,,] cube, int el)
+bool IsContained(int[,,] cube, int el)
 {
   for (int i = 0; i < cube.GetLength(0); i++)
   {
@@ -50,11 +47,11 @@ bool IsNotContained(int[,,] cube, int el)
     {
       for (int k = 0; k < cube.GetLength(2); k++)
       {
-        if (el == cube[i, j, k]) return false;
+        if (el == cube[i, j, k]) return true;
       }
     }
   }
-  return true;
+  return false;
 }
 int[,,] array = Create3DArray(5, 3, 5);
 Write3DArray(array);
